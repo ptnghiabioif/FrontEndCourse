@@ -1,0 +1,81 @@
+git init
+git status
+git add 
+git commit
+
+git log
+git show
+git diff
+
+working directory
+staging area
+git repository
+gitk // Giao diện GUI
+
+git restore // Bỏ các chỉnh sửa đã thêm vào trong working directory
+git reset
+
+git checkout -b <branch> (braching) // tạo nhánh mới
+git checkout <branch>
+git merge // ghép nhánh A và B với nhau
+A <---- B
+>>git checkout A
+>>git merge B
+master <---- feature/dog-class
+
+git branch -D <branch> (delete a branch)
+
+git reset --soft <to_commit>
+git reset --mixed <to_commit>
+git reset --hard <to_commit>
+
+get revert <commit> // Trả lại trạng thái lúc trước -> tránh dùng
+.gitignore
+
+git remote add origin <url>
+git remote -v
+
+github
+git push
+
+git config --global credential.helper store
+^^^ not recommend (~/.git-credential)
+
+git config --global credential.helper "cache --timeout=18000"
+
+google "gnome-keyring" "git ssh"
+
+git clone
+git pull
+
+Pull request
+1. git checkout -b <branch>
+2. git push origin <branch>
+3. create a pull request on Github
+4. review code
+    4.1 review code online (github)
+    4.2 fetch branch into local to test offline (optional)
+    4.3 approve the pull request
+5. merge to master
+
+Resolve conflicts
+When will conflicts happen?
+    1. Changing the same file + same line
+    2. A deleted file X, B modified file X
+
+Method 1:
+    1. Using 'git rebase'
+    2. Resolve conflicts
+    3. Push again with -f
+
+Method 2:
+    1. Merge updated master to feature branch (3-way merge)
+    2. Resolve conflicts 
+    3. Commit and push
+
+
+
+
+
+
+

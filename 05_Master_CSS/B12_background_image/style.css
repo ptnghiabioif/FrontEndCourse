@@ -1,0 +1,47 @@
+/* 
+    background-image: url(...);
+    background-repeat: repeat-x | repeat-y | np-repeat | repeat* | ...;
+    background-size: % | contain | cover | auto* | 
+    background-position: x y | center;
+    background-attachment: scoll* | fixed
+*/
+body {
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+.list-item {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 16pt;
+    margin-bottom: 8pt;
+    border-radius: 10pt;
+    background-color: #DDD;
+}
+.list-item-transparent {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(135,18,140,1) 35%, rgba(0,212,255,1) 100%);
+    color: #FFF;
+}
+.list-item-pattern {
+    background-image: url(./pattern.jpg);
+    background-size: 20%;
+    height: 100px;
+    color: white;
+    background-repeat: repeat;
+}
+.list-item-image {
+    background-image: url(./bg.jpg);
+    height: 100px;
+    color: white;
+    background-size: cover;
+    background-position: 0 -220px;
+}
+.list-item-parallax {
+    background-image: url(./bg.jpg);
+    height: 100px;
+    color: white;
+    background-size: cover;
+    background-position: -180px;
+    background-attachment: fixed;
+}

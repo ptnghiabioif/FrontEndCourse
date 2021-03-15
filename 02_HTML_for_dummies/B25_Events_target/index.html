@@ -1,0 +1,76 @@
+<!-- $0.addEventListener (Observer design pattern) -->
+<!-- Design patterms -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+<body>
+    <input id="new-item" type="text"/>
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+        <!-- <li>Take shower</li>
+        <li>Have to walk</li>
+        <li>Go to learn</li> -->
+    </ul>
+    
+    <script type="text/javascript">
+        var storageKey = 'todoList';
+        var dataString = localStorage.getItem(storageKey);
+        var htmllist = document.getElementById('todo-list');
+        var addBtn = document.getElementById('add-btn');
+
+        addBtn.addEventListener('click', addItem);
+        htmllist.addEventListener('click', onListClicked);
+
+        var todoList;
+        if (dataString){
+            todoList = JSON.parse(dataString);
+        } else {
+            todoList = [];
+        }
+        function onListClicked(event) {
+            var button = event.target;
+            var id = parseInt(button.dataset.id);
+            todoList.splice(id, 1);
+            render()
+            localStorage.setItem(storageKey, JSON.stringify(todoList))
+        };
+
+        function addItem() {
+            // get value of the input
+            var input = document.getElementById('new-item');
+            var newItem = input.value;
+            // add to todoList array
+            todoList.push(newItem);
+            // re-render
+            
+            render();
+            // clear input
+            input.value = '';
+            // store data
+            localStorage.setItem(storageKey, JSON.stringify(todoList))
+        }
+        // function deleteItem(item) {
+        //     console.log(item)
+        //     todoList.splice(item, 1);
+        //     localStorage.setItem(storageKey, JSON.stringify(todoList))
+        //     render()
+        // }
+        function render() {
+            
+            var content = '';
+            content = todoList.map(function(item, index) {
+                return '<li>' + item + ' <button data-id="'+ index +'">Del</button>' + '</li>' ;
+            });
+            // console.log(content)
+            
+            htmllist.innerHTML = content.join('');
+            // CLI -> command line interface -> web interface
+        }
+        render()
+    </script>
+</body>
+</html>

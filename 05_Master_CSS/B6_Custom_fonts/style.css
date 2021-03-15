@@ -1,0 +1,16 @@
+/* 
+font-family: font1, font2, font3
+font-style: normal | italic
+font-size: 18px
+font-weight: normal | bold | 400 | 600 | 700 | 900
+ */
+.list-item {
+    color: red;
+    font-weight: bold;
+    padding: 16pt;
+    margin-bottom: 8pt;
+    border-width: 1pt;
+    border-style: solid;
+    border-color: #20aa4e;
+    border-radius: 10pt;
+}

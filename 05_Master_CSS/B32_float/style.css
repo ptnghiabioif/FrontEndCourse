@@ -1,0 +1,61 @@
+/* 
+position: static* | relative | fixed | absolute | sticky
+top bottom left right
+realtive: tương đối với bị trí định trước
+fixed: tương đối với cữa sổ trình duyệt
+absolute: tương đối với thằng cha gần nhất có positive: relative
+*/
+.header {
+    height: 100px;
+}
+
+.sidebar {
+    float: left;
+    width: 20%;
+}
+
+.main {
+    margin-left: 20%;
+}
+
+.wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 100px;
+}
+
+.footer {
+    height: 100px;
+}
+
+
+
+
+/* .menu {
+    list-style: none;
+    background-color: #EEE;
+}
+
+.menu li {
+    float: left;
+    padding: 8px 16px;
+    background-color: #DDD;
+}
+
+p {
+    clear: left;
+}
+
+.float-left {
+    float: left;
+    margin-right: 10px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 10px;
+} */
+
+
+

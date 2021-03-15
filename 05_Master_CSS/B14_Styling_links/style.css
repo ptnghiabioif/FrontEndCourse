@@ -1,0 +1,16 @@
+/* 
+inline vs. block
+inline: chỉnh chiều rộng và cao (width và height) ko có hiệu lực
+margin chỉ có tác dụng trái phải; trên dưới không có
+padding có hiệu lực
+
+block: margin thì có đủ 4 chiều
+*/
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}

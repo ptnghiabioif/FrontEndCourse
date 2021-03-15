@@ -1,0 +1,51 @@
+/* 
+position: static* | relative | fixed | absolute | sticky
+top bottom left right
+realtive: tương đối với bị trí định trước
+fixed: tương đối với cữa sổ trình duyệt
+absolute: tương đối với thằng cha gần nhất có positive: relative
+*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    
+}
+.menu a {
+    color: #555;
+    text-decoration: none;
+}
+
+.menu li {
+    padding: 8px 16px;
+    
+}
+
+.menu li:hover {
+    background-color: #EEE;
+}
+
+.has-submenu {
+    position: relative;
+}
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background-color: #EEE;
+
+}
+
+
+

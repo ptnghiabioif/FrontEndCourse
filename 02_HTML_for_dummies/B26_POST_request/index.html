@@ -1,0 +1,84 @@
+<!-- sessionStorage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+</head>
+<body>
+    <input id="new-item" type="text"/>
+    <button id="add-btn">Add</button>
+    <ul id="todo-list">
+        <!-- <li>Take shower</li>
+        <li>Have to walk</li>
+        <li>Go to learn</li> -->
+    </ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+        var url = 'http://localhost:9081/todos';
+        axios.get(url).then(function(res) {
+            var items = res.data;
+            render(items)
+        })
+
+        // var todoList = [
+        //     'Take shower',
+        //     'Have to walk',
+        //     'Go to learn'
+        // ];
+
+        var addBtn = document.getElementById('add-btn');
+        var input = document.getElementById('new-item');
+        input.addEventListener('change', updateSessionStorage);
+        input.value = sessionStorage.getItem('draft')
+        // addBtn.onclick = addItem;
+        // gọi hàm -> undefined trừ khi return; ghi tên thôi
+        addBtn.addEventListener('click', addItem);
+        addBtn.addEventListener('click', function() {
+            console.log('Add button is clicked');
+        }); // anonymous function 
+
+        function updateSessionStorage() {
+            sessionStorage.setItem('draft', input.value)
+        }
+
+        // addBtn trigger a click event
+        // a click event is triggered
+        // event listener
+
+        function addItem() {
+            // get value of the input
+            
+            var newItem = { content: input.value};
+            // add to todoList array
+            axios.post(url, newItem).then(function() {
+                console.log('Item saved', item);
+            });
+        }
+        function deleteItem(item) {
+            console.log(item)
+            todoList.splice(item, 1);
+            localStorage.setItem(storageKey, JSON.stringify(todoList))
+            render()
+        }
+        function render(items) {
+            var htmllist = document.getElementById('todo-list');
+            var content = '';
+            content = items.map(function(item, index) {
+                return '<li>' + item.content + '</li>' + '<button onclick="deleteItem(' + index + ')">Del</button>';
+            });
+            // console.log(content)
+            
+            htmllist.innerHTML = content.join('');
+            // CLI -> command line interface -> web interface
+        }
+        // render()
+        
+        // window.location.href = '/new-item.html'
+        // window.location.href = '/'
+        // location.hash
+    </script>
+</body>
+</html>

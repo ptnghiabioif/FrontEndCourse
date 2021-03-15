@@ -1,0 +1,40 @@
+/* 
+display: flex
+flex-direction
+justify-content: flex-start* | flex-end | center | space-between | space-around | space-evenly
+align-items: flex-start | flex-end | center | baseline | stretch*
+
+flex-basis: <length> | auto*;
+flex-grow: <number> | 0*
+flex-shrink: <number> | 1*
+order: <number> | 0*
+*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.album-square {
+    width: 128px;
+    height: 128px;
+    background-color: #DDD;
+    background-image: url(https://loremflickr.com/320/240);
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    font-size: 60px;
+    margin: 20px
+}
+
+.album-square .overlay {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.album-square:hover .overlay {
+    opacity: 1;
+}
+

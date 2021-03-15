@@ -1,0 +1,29 @@
+/* 
+color: #DDD
+text-align: center | left | right | justify
+text-decoration: none | underline | overline | line-through
+text-transform: uppercase | lowercase | capitalize
+text-indent: 10px
+letter-spacing: 5px
+word-spacing: 10px
+line-height: 1.2 //a number
+text-shadow: x y color blur;
+*/
+.center {
+    text-align: center;
+}
+h1 {
+    color: rgba(100, 150, 70, 0.5);
+    font-family: sans-serif;
+    text-decoration: line-through;
+    text-transform: capitalize;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+a {
+    text-decoration: none;
+}
+p {
+    text-indent: 10px;
+    line-height: 1;
+}
+

@@ -1,0 +1,15 @@
+/* 
+CSS combinators
+descendant selector (space): lấy tất cả con cháu
+child selector (>): lấy tất cả con liền kề
+adjacent sibling selector (+): 1 anh em tiếp theo
+general sibling selector (~): tất cả anh em tiếp theo
+*/
+/* .list-1 > .item {
+    border: 1px solid #333;
+} */
+.list-1 .item-2 ~ .item {
+    border: 1px solid #333;
+}
+
+
