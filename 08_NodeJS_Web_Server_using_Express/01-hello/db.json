@@ -6,7 +6,10 @@
     },
     {
       "name": "Nicolas",
-      "id": "dU4nhakqP"
+      "phone": "0123123123",
+      "id": "dU4nhakqP",
+      "email": "ptnghia@mail.com",
+      "password": "123456"
     },
     {
       "name": "Tracy",
@@ -21,6 +24,16 @@
       "name": "Anh",
       "phone": "0147258369",
       "id": "pKSPO2A1b"
+    },
+    {
+      "name": "Crush",
+      "phone": "0123698745",
+      "id": "MaFBM0sF4"
+    },
+    {
+      "name": "Lover",
+      "phone": "1234567890",
+      "id": "ZjoapCkp3"
     }
   ]
 }
